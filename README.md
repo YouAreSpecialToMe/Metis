@@ -13,12 +13,21 @@ Metis: Understanding and Enhancing Regular Expressions in Network
 
 ## Code Architecture
 ```
+-- ByteLevelTokenization
+   -- create_logic_mat_bias.py
+   -- create_snort_automata.py
+   -- decompose_snort_automata.py
+   -- dfa_from_rule.py
+   -- fsa_to_tensor.py
+   -- load_dataset.py
+   -- process_snort_data.py
 -- Distilltion
   -- RNNeval.py
   -- SSPKD.py
   -- SoftTree.py
 -- Hardware
   -- data_plane.p4
+
 ```
 
 

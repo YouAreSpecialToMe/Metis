@@ -17,6 +17,8 @@ Metis: Understanding and Enhancing Regular Expressions in Network
   -- RNNeval.py
   -- SSPKD.py
   -- SoftTree.py
+-- Hardware
+  -- data_plane.p4
 ```
 
 

@@ -27,7 +27,20 @@ Metis: Understanding and Enhancing Regular Expressions in Network
   -- SoftTree.py
 -- Hardware
   -- data_plane.p4
-
+-- models
+   -- BRNN.py
+   -- BRNN_O.py
+   -- Baseline.py
+   -- net.py
+-- utils
+   -- data.py
+   -- utils.py
+-- RE.py
+-- README.md
+-- requirements.txt
+-- run_dfa2brnn.py
+-- train_brnn.py
+-- val.py
 ```
 
 

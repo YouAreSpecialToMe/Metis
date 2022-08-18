@@ -4,9 +4,10 @@ Metis: Understanding and Enhancing Regular Expressions in Network
 ## Dataset Architecture
 ```
 -- Data
-  -- <rule name>
-    -- <rule name>.csv
-    -- dataset-<label ratio>.pkl
+  -- snort
+    -- <rule name>
+      -- <rule name>.csv
+      -- dataset-<label ratio>.pkl
 ```
   
 

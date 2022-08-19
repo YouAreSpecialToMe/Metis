@@ -57,6 +57,11 @@ Process Snort rules
 ```
 python3 process_snort_data.py
 ```
+Create m-DFA based on Snort rules
+```
+# create "category_name"'s m-DFA of Snort, save as "automata_name"
+python3 create_snort_automata.py --dataset category_name --automata_name automata_name
+```
 
 ### Run RNNeval
 This code is used for generate soft labels after BRNN training.

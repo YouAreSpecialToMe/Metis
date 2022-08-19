@@ -49,18 +49,23 @@ Metis: Understanding and Enhancing Regular Expressions in Network
 
 ## Run Code
 ### Byte-Level Tokenization
-Download Snort rules and unzip them to "./data/snort/rules/"
+Download Snort rules and unzip them to "./data/snort/rules/".
 ```
 https://www.snort.org/downloads
 ```
-Process Snort rules
+Process Snort rules.
 ```
 python3 process_snort_data.py
 ```
-Create m-DFA based on Snort rules
+Create m-DFA based on Snort rules.
 ```
 # create "category_name"'s m-DFA of Snort, save as "automata_name"
 python3 create_snort_automata.py --dataset category_name --automata_name automata_name
+```
+Prepare byte-level dataset
+```
+# prepare "category_name" datset, divide into training set, test set and val set with 7:2:1 and using 1% training data.
+python3 load_dataset.py --dataset category_name --test_split 0.1 --val_split 0.2 --datset_split 0.01
 ```
 
 ### Run RNNeval

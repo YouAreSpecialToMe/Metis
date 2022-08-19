@@ -95,7 +95,7 @@ def create_snort_automata(args):
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--dataset_name', type=str, default=snort, help="category name")
+    parser.add_argument('--dataset', type=str, default=snort, help="category name")
     parser.add_argument('--automata_name', type=str, default='all', help="automata name prefix")
 
     args = parser.parse_args()

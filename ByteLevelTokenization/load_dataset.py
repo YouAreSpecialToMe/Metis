@@ -164,33 +164,12 @@ def load_classification_dataset(args):
 
 if __name__ == '__main__':
 
-    snort_dataset = ['chat',
-                     'ftp',
-                     'games',
-                     'misc',
-                     'netbios',
-                     'p2p',
-                     'policy',
-                     'scan',
-                     'telnet',
-                     'tftp',
-                     'web_client', ]
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--dataset', type=str, default=snort, help="dataset name")
+    parser.add_argument('--test_split', type=float, default=0.2, help="spilt rate of test set")
+    parser.add_argument('--val_split', type=float, default=0.1, help="spilt rate of validation set")
+    parser.add_argument('--dataset_split', type=float, default=spilt, help="rate of using labeled data")
 
-    # snort_dataset = ['policy']
+    args = parser.parse_args()
 
-    for snort in snort_dataset:
-
-        scoure_csv = os.path.dirname(__file__) + "/LabeledData/{}.csv".format(snort)
-        dist = os.path.dirname(__file__) + "/data/snort/{}/{}.csv".format(snort, snort)
-        shutil.copy(scoure_csv, dist)
-        for spilt in [0.01, 0.1, 1]:
-            parser = argparse.ArgumentParser()
-            parser.add_argument('--dataset', type=str, default=snort, help="dataset name")
-            parser.add_argument('--test_spilt', type=float, default=0.2, help="spilt rate of test set")
-            parser.add_argument('--val_spilt', type=float, default=0.1, help="spilt rate of validation set")
-            parser.add_argument('--dataset_spilt', type=float, default=spilt, help="rate of using labeled data")
-
-            args = parser.parse_args()
-            # assert args.dataset_name in ['ATIS', 'TREC', 'SMS']
-
-            print(create_classification_dataset(args))
+    print(create_classification_dataset(args))

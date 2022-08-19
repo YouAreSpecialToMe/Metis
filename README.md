@@ -55,8 +55,9 @@ https://www.snort.org/downloads
 ```
 Process Snort rules
 ```
-
+python3 process_snort_data.py
 ```
+
 ### Run RNNeval
 This code is used for generate soft labels after BRNN training.
 ```

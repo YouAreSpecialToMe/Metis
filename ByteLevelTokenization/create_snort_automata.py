@@ -93,31 +93,10 @@ def create_snort_automata(args):
 
 
 if __name__ == '__main__':
-    snort_dataset = ['chat',
-                     'ftp',
-                     'games',
-                     'icmp_info',
-                     'imap',
-                     'malware',
-                     'misc',
-                     'netbios',
-                     'p2p',
-                     'policy',
-                     'scan',
-                     'sql',
-                     'telnet',
-                     'tftp',
-                     'user_agents',
-                     'voip',
-                     'web_client',
-                     'web_server', ]
-    snort_dataset = ['policy']
 
-    for snort in snort_dataset:
-        parser = argparse.ArgumentParser()
-        parser.add_argument('--dataset_name', type=str, default=snort, help="category name")
-        parser.add_argument('--automata_name', type=str, default='all', help="automata name prefix")
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--dataset_name', type=str, default=snort, help="category name")
+    parser.add_argument('--automata_name', type=str, default='all', help="automata name prefix")
 
-        args = parser.parse_args()
-        # assert args.dataset_name in ['ATIS', 'TREC', 'SMS']
-        create_snort_automata(args)
+    args = parser.parse_args()
+    create_snort_automata(args)

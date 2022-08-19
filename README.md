@@ -48,6 +48,15 @@ Metis: Understanding and Enhancing Regular Expressions in Network
 
 
 ## Run Code
+### Byte-Level Tokenization
+Download Snort rules and unzip them to "./data/snort/rules/"
+```
+https://www.snort.org/downloads
+```
+Process Snort rules
+```
+
+```
 ### Run RNNeval
 This code is used for generate soft labels after BRNN training.
 ```

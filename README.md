@@ -62,7 +62,7 @@ Create m-DFA based on Snort rules.
 # to create "category_name"'s m-DFA of Snort, save as "automata_name"
 python3 create_snort_automata.py --dataset category_name --automata_name automata_name
 ```
-Prepare byte-level dataset
+Prepare byte-level dataset.
 ```
 # to prepare "category_name" datset, divide into training set, test set and val set with 7:2:1 and using 1% training data.
 python3 load_dataset.py --dataset category_name --test_split 0.1 --val_split 0.2 --datset_split 0.01
@@ -73,7 +73,7 @@ Train a BRNN.
 # to train a BRNN based on "category_name", see more parameters in our source code.
 python3 run_dfa2BRNN --dataset "category_name" --model_type Onehot
 ```
-Train other baselines (e.g., LSTM)
+Train other baselines (e.g., LSTM).
 ```
 # to train a LSTM based on "category_name", see more parameters in our source code.
 python3 run_dfa2BRNN --dataset "category_name" --model_type MarryUp -rnn LSTM
